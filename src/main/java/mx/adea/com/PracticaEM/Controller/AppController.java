@@ -53,11 +53,15 @@ public class AppController {
         );*/
         //repo.save(usuario);
 
-        LoginRequest l = new LoginRequest();
+        /*LoginRequest l = new LoginRequest();
         l.setUsuario("Usaurio 2");
-        //repo.deleteById(l.getUsuario());
+        repo.deleteById(l.getUsuario());
+        l.setUsuario("Usaurio 3");
+        repo.deleteById(l.getUsuario());
+        l.setUsuario("Usaurio 4");
+        repo.deleteById(l.getUsuario());*/
 
-        return repo.findById(l.getUsuario()).get().toString();
+        return "repo.findById(l.getUsuario()).get().toString()";
     }
 
     @GetMapping(value = "/getUsuarios")
@@ -111,11 +115,11 @@ public class AppController {
     @PostMapping(value = "/eliminar")
     public ResponseEntity<MsjResponse> Eliminar (@RequestBody ModificarUsuario request){
 
-        log.info("Inicia /login");
+        log.info("Inicia /eliminar");
         UsuarioService uService = new UsuarioService();
         ResponseEntity<MsjResponse> response = uService.eliminarUsuario(request, repo);
 
-        log.info("Termina /login \n");
+        log.info("Termina /eliminar \n");
         return response;
 
     }

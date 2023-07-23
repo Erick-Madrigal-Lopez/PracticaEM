@@ -1,5 +1,7 @@
 package mx.adea.com.PracticaEM.Models;
 
+import javax.persistence.Entity;
+
 public class MsjResponse {
     private String codigo;
     private String mensaje;

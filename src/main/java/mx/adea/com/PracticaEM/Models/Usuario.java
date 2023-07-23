@@ -205,6 +205,7 @@ public class Usuario {
     @Override
     public String toString(){
         return "Usuario { login => "+login+", nombre => "+nombre+", " +
-                "apellidoPat => "+apellidoPaterno+", apellidoMat => "+apellidoMaterno+",  }";
+                "apellidoPat => "+apellidoPaterno+", apellidoMat => "+apellidoMaterno+",  " +
+                " estatus => "+status+", Fecha modificacion => "+fechaModificacion+"}";
     }
 }
